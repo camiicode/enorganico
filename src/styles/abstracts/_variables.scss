@@ -1,0 +1,63 @@
+// Colors
+$enorganico-primary-color:         #EDE0D7;
+$enorganico-secondary-color:       #693B00;
+
+$enroganico-high-accent-color:     #A4671F;
+$enroganico-middle-accent-color:   #D39B5E;
+$enorganico-low-accent-color:      #DCBA8C;
+
+$enorganico-white-color:           #FFFFFF;
+$enorganico-black-color:           #000000;
+
+// Colors - CSS Variables
+:root {
+  --enorganico-primary-color:         #EDE0D7;
+  --enorganico-secondary-color:       #693B00;
+
+  --enorganico-high-accent-color:     #A4671F;
+  --enorganico-middle-accent-color:   #D39B5E;
+  --enorganico-low-accent-color:      #DCBA8C;
+
+  --enorganico-white-color:           #FFFFFF;
+  --enorganico-black-color:           #000000;
+}
+
+// Font weights
+:root {
+  --enorganico-font-weight-thin:        100;
+  --enorganico-font-weight-extralight:  200;
+  --enorganico-font-weight-light:       300;
+  --enorganico-font-weight-regular:     400;
+  --enorganico-font-weight-medium:      500;
+  --enorganico-font-weight-semibold:    600;
+  --enorganico-font-weight-bold:        700;
+  --enorganico-font-weight-extrabold:   800;
+  --enorganico-font-weight-black:       900;
+}
+
+// Breakpoints for media queries
+$breakpoints: (
+
+  // Phones
+  "phone-xxs":                  320px,
+  "phone-xs":                   375px,
+  "phone-s":                    420px,
+  "phone-m":                    580px,
+  "phone-l":                    640px,
+  "phone-xl":                   800px,
+
+  // Tablets
+  "tablet-xs":                  750px,
+  "tablet-s":                   820px,
+  "tablet-m":                   900px,
+  "tablet-l":                   980px,
+
+  // Desktop
+  "desktop-xs":                1024px,
+  "desktop-s":                 1140px,
+  "desktop-md":                1280px,
+  "desktop-l":                 1360px,
+  "desktop-xl":                1440px,
+  "desktop-xxl":               1980px
+  
+);
