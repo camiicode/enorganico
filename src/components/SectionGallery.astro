@@ -44,7 +44,7 @@ const shuffledImages = shuffle(images).slice(0, 7); // Coger 7 elementos al azar
 
     return (
       <img
-        key={i} // ⚠️ IMPORTANTE: Agregar key única
+        // key={i} // ⚠️ IMPORTANTE: Agregar key única
         src={img}
         alt={`Gallery Image ${i + 1}`}
         class={`enorganico-gallery__image absolute max-w-[400px] max-h-[400px] object-cover object-center transition-all duration-500 d-block p-3 bg-white`}
