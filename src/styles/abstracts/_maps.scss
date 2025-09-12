@@ -2,7 +2,7 @@
 $breakpoints: (
 
   // Phones
-  "phone-xxs":                  320px,
+  "phone-xxs":                   320px,
   "phone-xs":                   375px,
   "phone-s":                    420px,
   "phone-m":                    580px,
@@ -23,4 +23,27 @@ $breakpoints: (
   "desktop-xl":                1440px,
   "desktop-xxl":               1980px
   
+);
+
+// Color palette
+$enorganico-colors: (
+  primary:   #EDE0D7,
+  secondary: #693B00,
+  high:      #A4671F,
+  middle:    #D39B5E,
+  low:       #DCBA8C,
+  light:     #FFFFFF,
+  dark:      #000000
+);
+
+$enorganico-font-weights: (
+  thin:         var(--enorganico-font-weight-thin),
+  extralight:   var(--enorganico-font-weight-extralight),
+  light:        var(--enorganico-font-weight-light),
+  regular:      var(--enorganico-font-weight-regular),
+  medium:       var(--enorganico-font-weight-medium),
+  semibold:     var(--enorganico-font-weight-semibold),
+  bold:         var(--enorganico-font-weight-bold),
+  extrabold:    var(--enorganico-font-weight-extrabold),
+  black:        var(--enorganico-font-weight-black),
 );

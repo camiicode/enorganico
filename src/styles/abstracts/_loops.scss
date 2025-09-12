@@ -1,0 +1,22 @@
+@use 'variables' as *;
+@use 'maps' as *;
+
+@each $name, $color in $enorganico-colors {
+  .enorganico-text-#{$name} {
+    color: $color !important;
+  }
+
+  .enorganico-bg-#{$name} {
+    background-color: $color !important;
+  }
+
+  .enorganico-border-#{$name} {
+    border-color: $color !important;
+  }
+}
+
+@each $name, $weight in $enorganico-font-weights {
+  .enorganico-font-weight-#{$name} {
+    font-weight: $weight !important;
+  }
+}

@@ -1,6 +1,8 @@
 // abstracts
 @use 'abstracts/mixins';
 @use 'abstracts/variables';
+@use 'abstracts/maps';
+@use 'abstracts/loops';
 
 // base
 @use 'base/reset';
