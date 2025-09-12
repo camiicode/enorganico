@@ -1,0 +1,76 @@
+---
+const images: string[] = [
+  "src/assets/gallery-1.png",
+  "src/assets/gallery-2.png",
+  "src/assets/gallery-3.png",
+  "src/assets/gallery-4.png",
+  "src/assets/gallery-5.png",
+  "src/assets/gallery-6.png",
+];
+
+function shuffle(arr: string[]): string[]{
+  return arr.sort(() => Math.random() - 0.5);
+}
+
+const shuffledImages = shuffle(images).slice(0, 7); // Coger 7 elementos al azar u orgnaizarlos aleatoriamente
+
+---
+
+<section id="gallery" class="enorganico enorganico-gallery relative overflow-hidden">
+  <div class="container-fluid px-0">
+    <div class="row">
+      <div class="col-12">
+
+        <div class="relative w-full h-screen d-flex items-center justify-center overflow-hidden">
+          <div class="z-10 text-center max-w-md enorganico-gallery__content">
+            <h1 class="text-2xl enorganico-text-secondary enorganico-font-weight-black enorganico-text-primary">LOREM IPSUM DOLOR SIT AMET CONSECTETUR</h1>
+            <p class="mt-2 text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla risus nulla, maximus sed ex eget, volutpat ultrices mauris. Donec at ornare tellus. Phasellus a lorem lacus. Nunc sagittis id libero.</p>
+            <a class="btn btn-primary mt-4" href="#">Saber Mas</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  {shuffledImages.map((img: string, i: number) => {
+    let top: number, left: number;
+
+    // Generar posiciones aleatorias evitando el centro
+    do {
+      top = Math.random() * 90; // 0-65%
+      left = Math.random() * 90; // 0-65%
+    } while (top > 25 && top < 70 && left > 30 && left < 70);
+
+    return (
+      <img
+        key={i} // ⚠️ IMPORTANTE: Agregar key única
+        src={img}
+        alt={`Gallery Image ${i + 1}`}
+        class={`enorganico-gallery__image absolute max-w-[400px] max-h-[400px] object-cover object-center transition-all duration-500 d-block p-3 bg-white`}
+        style={`top:${top}%; left:${left}%;`} // Usar las variables calculadas
+      />
+    );
+  })}
+
+</section>
+
+<style lang="scss">
+  .enorganico {
+    &-gallery__content {  
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 150%;
+        height: 150%;
+        background-image: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1), rgba(255, 255, 255, 0) 25%);
+        border-radius: 15px;
+        z-index: -1;
+      }
+    }
+  }
+</style>
