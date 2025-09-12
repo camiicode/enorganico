@@ -1,0 +1,24 @@
+---
+import CarouselProduct from '../CarouselProduct.astro';
+import bgCarouselProducts from 'src/assets/bg-carousel-products.png';
+---
+
+<section id="product-carosuel" class="enorganico enorganic-product-carousel bg-[url('src/assets/bg-carousel-products.png')] bg-cover bg-center bg-no-repeat">
+  <div class="container-fluid px-0 w-screen h-screen">
+    <div class="row flex items-center justify-center w-full h-full">
+
+      <div class="offset-md-1 offset-0 col-md-4 col-12 px-3 px-md-0 enorganico-product-carousel__content">
+        <h2 class="text-5xl">Lorem ipsum dolor sit amet.</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure eligendi est assumenda voluptatem officia at iusto excepturi molestias eaque optio!</p>
+        <div class="enorganico-product-carosuel__content--button">
+          <a href="#" class="btn btn-primary btn-large">Ver productos</a>
+        </div>
+      </div>
+      
+      <div class="col-md-7 col-12 enorganico-product-carousel__carousel px-0 h-75 d-flex items-center">
+        <CarouselProduct />
+      </div>
+
+    </div>
+  </div>
+</section>

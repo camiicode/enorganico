@@ -23,7 +23,7 @@ const shuffledImages = shuffle(images).slice(0, 7); // Coger 7 elementos al azar
 
         <div class="relative w-full h-screen d-flex items-center justify-center overflow-hidden">
           <div class="z-10 text-center max-w-md enorganico-gallery__content">
-            <h1 class="text-2xl enorganico-text-secondary enorganico-font-weight-black enorganico-text-primary">LOREM IPSUM DOLOR SIT AMET CONSECTETUR</h1>
+            <h1 class="text-2xl enorganico-text-secondary enorganico-font-weight-blacked">LOREM IPSUM DOLOR SIT AMET CONSECTETUR</h1>
             <p class="mt-2 text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla risus nulla, maximus sed ex eget, volutpat ultrices mauris. Donec at ornare tellus. Phasellus a lorem lacus. Nunc sagittis id libero.</p>
             <a class="btn btn-primary mt-4" href="#">Saber Mas</a>
           </div>
@@ -44,11 +44,10 @@ const shuffledImages = shuffle(images).slice(0, 7); // Coger 7 elementos al azar
 
     return (
       <img
-        // key={i} // ⚠️ IMPORTANTE: Agregar key única
         src={img}
         alt={`Gallery Image ${i + 1}`}
         class={`enorganico-gallery__image absolute max-w-[400px] max-h-[400px] object-cover object-center transition-all duration-500 d-block p-3 bg-white`}
-        style={`top:${top}%; left:${left}%;`} // Usar las variables calculadas
+        style={`top:${top}%; left:${left}%;`}
       />
     );
   })}
