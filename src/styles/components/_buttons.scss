@@ -1,0 +1,42 @@
+@use '../abstracts/variables' as *;
+@use 'sass:color';
+
+.btn {
+  border-radius: 50px;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  outline: 0;
+  border: none;
+  transition: ease-in-out .3s all;
+
+  &-primary {
+    background-color: var(--enorganico-primary-color);
+    color: var(--enorganico-secondary-color);
+    font-weight: bold;
+
+    &:hover, &:focus, &:active {
+      background-color: color.adjust($enorganico-primary-color, $lightness: -5%);
+      color: var(--enorganico-secondary-color);
+    }
+  }
+
+  &-secondary {
+    background-color: var(--enorganico-secondary-color);
+    color: var(--enorganico-primary-color);
+    font-weight: bold;
+
+    &:hover, &:focus, &:active {
+      background-color: color.adjust($enorganico-secondary-color, $lightness: -5%);
+      color: var(--enorganico-primary-color);
+    }
+  }
+
+  &:has(span.btn-icon) {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: auto;
+  }
+
+}

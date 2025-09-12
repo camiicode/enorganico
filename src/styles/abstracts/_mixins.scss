@@ -1,10 +1,12 @@
+@use "sass:map";
 @use 'variables' as *;
+@use 'maps' as *;
 
 // Media Queries
 @mixin mq($width, $type: max) {
-  @if map_has_key($breakpoints, $width) {
-    $width: map_get($breakpoints, $width);
-    @if $type == min {
+  @if map.has-key($breakpoints, $width) {
+    $width: map.get($breakpoints, $width);
+    @if $type == max {
       $width: $width - 1px;
     }
     @media only screen and (#{$type}-width: $width) {
@@ -18,7 +20,7 @@
 
 // Meadia Queries for landscape
 @mixin mq-l($width, $type: max){
-  $width: map_get($breakpoints, $width);
+  $width: map.get($breakpoints, $width);
   @media (#{$type}-width: $width) and (orientation: landscape) {
     @content;
   }
