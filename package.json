@@ -5,6 +5,8 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "preview": "astro preview",
     "astro": "astro"
   },
@@ -15,5 +17,8 @@
     "sass": "^1.92.1",
     "swiper": "^11.2.10",
     "tailwindcss": "^4.1.13"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   }
 }
