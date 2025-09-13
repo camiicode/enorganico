@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-12">
 
-        <div class="relative w-full h-screen d-flex items-center justify-center overflow-hidden">
+        <div class="relative w-full h-screen d-flex items-center justify-center overflow-hidden enorganico-gallery__space">
           <div class="z-10 text-center max-w-md enorganico-gallery__content">
             <h1 class="text-2xl enorganico-text-secondary enorganico-font-weight-blacked">LOREM IPSUM DOLOR SIT AMET CONSECTETUR</h1>
             <p class="mt-2 text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla risus nulla, maximus sed ex eget, volutpat ultrices mauris. Donec at ornare tellus. Phasellus a lorem lacus. Nunc sagittis id libero.</p>
@@ -31,7 +31,7 @@
     images.sort(() => Math.random() - 0.5);
     const shuffled = images.slice(0, 7);
 
-    const section = document.getElementById("gallery");
+    const section = document.querySelector(".enorganico-gallery__space");
 
     shuffled.forEach((img, i) => {
       let top, left;
