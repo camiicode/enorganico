@@ -12,13 +12,18 @@
   },
   "dependencies": {
     "@fontsource/montserrat": "^5.2.7",
+    "@tailwindcss/postcss": "^4.1.13",
     "@tailwindcss/vite": "^4.1.13",
     "astro": "^5.13.5",
+    "postcss": "^8.5.6",
     "sass": "^1.92.1",
     "swiper": "^11.2.10",
     "tailwindcss": "^4.1.13"
   },
   "devDependencies": {
-    "gh-pages": "^6.3.0"
+    "gh-pages": "^6.3.0",
+    "postcss-discard": "^2.0.0",
+    "postcss-discard-comments": "^7.0.4",
+    "postcss-preset-env": "^10.3.1"
   }
 }

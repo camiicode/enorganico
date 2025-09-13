@@ -10,3 +10,9 @@
 // components
 @use 'components/buttons';
 @use 'components/carousel';
+
+// Themes
+@use "themes/cement-design";
+
+// Vendors
+@use "vendors/odoo";
