@@ -1,5 +1,5 @@
 // Colors
-$enorganico-primary-color:         #EDE0D7 !default;
+$enorganico-primary-color:         #E0D4BB !default;
 $enorganico-secondary-color:       #693B00 !default;
 
 $enroganico-high-accent-color:     #A4671F !default;
@@ -11,7 +11,7 @@ $enorganico-dark-color:            #000000 !default;
 
 // Colors - CSS Variables
 :root {
-  --enorganico-primary-color:         #EDE0D7;
+  --enorganico-primary-color:         #E0D4BB;
   --enorganico-secondary-color:       #693B00;
 
   --enorganico-high-accent-color:     #A4671F;
@@ -33,4 +33,12 @@ $enorganico-dark-color:            #000000 !default;
   --enorganico-font-weight-bold:        700;
   --enorganico-font-weight-extrabold:   800;
   --enorganico-font-weight-blacked:     900;
+}
+
+// Hamburguer Icons
+:root {
+  --enorganico-hamburguer-size:                               28px;
+  --enorganico-hamburguer-thickness:                          3px;
+  --enorganico-hamburguer-gap:                                8px;
+  --enorganico-hamburguer-transition:                         300ms ease;
 }

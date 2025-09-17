@@ -1,0 +1,41 @@
+@use '../abstracts/variables' as *;
+
+.navbar-toggler-icon {
+  width: var(--enorganico-hamburguer-size);
+  height: var(--enorganico-hamburguer-thickness);
+  position: relative;
+  display: inline-block;
+  background: transparent; /* no pinta nada, todo lo hace ::before */
+  cursor: pointer;
+  color: var(--enorganico-secondary-color);
+}
+
+/* Usamos solo ::before para las tres barras */
+.navbar-toggler-icon::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: var(--enorganico-hamburguer-thickness);
+  background: var(--enorganico-secondary-color);
+  border-radius: 2px;
+  transform: translateY(-50%);
+  transition: transform var(--enorganico-hamburguer-transition), box-shadow var(--enorganico-hamburguer-transition);
+  
+  /* Dos sombras = barra arriba + barra abajo */
+  box-shadow:
+    0 calc(-1 * var(--enorganico-hamburguer-gap)) 0 0 var(--enorganico-secondary-color),
+    0 var(--enorganico-hamburguer-gap) 0 0 var(--enorganico-secondary-color);
+}
+
+/* Estado activo: convierte las 3 barras en una "X" */
+.navbar-toggler-icon.is-active::before {
+  transform: translateY(-50%) rotate(45deg);
+  box-shadow: 0 0 0 0 transparent, 0 0 0 0 transparent;
+}
+
+/* Truco: rotamos el propio span para crear la segunda línea de la "X" */
+.navbar-toggler-icon.is-active {
+  transform: rotate(-90deg);
+}

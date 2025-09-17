@@ -1,14 +1,16 @@
 ---
-import bgVideo2 from '../../assets/bg-video-2.mp4';
+import bgVideo2 from '../../assets/videos/bg-video-2.mp4';
 ---
 
 <section id="hero" class="enorganico enorganico-hero">
   <div class="container-fluid px-0">
     <div class="row">
       <div class="col-12 position-relative before:position-absolute before:top-0 before:left-0 before:right-0 before:bottom-0 before:w-full before:h-full before:bg-black/75">
-        <video autoplay muted loop class="enorganico-hero__video">
-          <source src={bgVideo2} type="video/mp4">
-        </video>
+        <picture>
+          <video autoplay muted loop class="enorganico-hero__video">
+            <source src={bgVideo2} type="video/mp4">
+          </video>
+        </picture>
         <div class="enorganico-hero__content text-start">
           <h1 class="text-white text-2xl">Bienvenido a Enorganico</h1>
           <p class="text-white ">El mejor cafe expresso de España</p>
@@ -32,28 +34,11 @@ import bgVideo2 from '../../assets/bg-video-2.mp4';
       min-height: 100vh;
       max-height: 100vh;
       overflow: hidden;
-
       video {
         width: auto;
         min-width: 100%;
-        height: auto;
-        max-height: 100vh;
+        height: 100vh;
         object-fit: cover;
-        position: relative;
-
-        &::before {
-          content: "";
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          width: 100%;
-          height: auto;
-          min-height: 100vh;
-          background-color: rgba(0,0,0,.5);
-          z-index: 999;
-        }
       }
 
       &__content {
@@ -62,6 +47,7 @@ import bgVideo2 from '../../assets/bg-video-2.mp4';
         left: 0;
         transform: translate(20%, -50%);
         text-align: center;
+        z-index: 1;
       }
     }
   }

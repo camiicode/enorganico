@@ -9,6 +9,8 @@
 
   &-product-carousel {
     &__content {
+      text-align: left;
+
       h2 {
         font-size: 3rem;
         font-weight: bold;
@@ -47,6 +49,7 @@
       border-radius: 15px;
       width: 75%;
       box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.05);
+      text-align: left;
 
       h3 {
         font-weight: var(--enorganico-font-weight-bold);
@@ -86,6 +89,14 @@
         5px 5px 10px rgba(0, 0, 0, 0.05)
         , -5px -5px 10px rgba(0, 0, 0, 0.05)
       ;
+      background-color: var(--enorganico-light-color);
     }
   }  
+}
+
+.enorganico-home__carousel-1,
+.enorganico-home__carousel-2 {
+  img {
+    width: 50% !important;
+  }
 }
