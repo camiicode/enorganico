@@ -5,6 +5,9 @@
     height: auto;
     min-height: 100dvh;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     @media screen and (max-width: 768px) {
       min-height: auto;
