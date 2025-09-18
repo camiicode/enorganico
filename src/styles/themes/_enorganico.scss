@@ -7,6 +7,28 @@
   mask: none !important;
 }
 
+.o_header_mobile {
+  i, svg {
+    &::before {
+      font-size: clamp(2rem, 2.5vw, 1.25rem);
+      line-height: 100%;
+      color: var(--enorganico-primary-color);
+    }
+  }
+}
+
+.o_no_autohide_menu.o_header_fixed.o_top_fixed_element.o_header_is_scrolled.o_header_affixed {
+  .o_header_mobile {
+    i, svg {
+      &::before {
+        font-size: clamp(2rem, 2.5vw, 1.25rem);
+        line-height: 100%;
+        color: var(--enorganico-secondary-color);
+      }
+    }
+  }
+}
+
 ul.o_header_hamburger_right_col {
   li {
     a {
