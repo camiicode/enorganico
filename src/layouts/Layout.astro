@@ -50,7 +50,32 @@ import "@fontsource/montserrat/900-italic.css";
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" 
       crossorigin="anonymous">
     </script>
+		<script>
+			document.addEventListener("DOMContentLoaded", () => {
+				
+				const BASE_URL = "https://cement-design.doodrix.com/";
+
+				const elements = document.querySelectorAll("[src], [href]")
+
+				elements.forEach(el => {
+					if (el.hasAttribute("src")) {
+						const src = el.getAttribute("src");
+
+						if (src.startsWith("/web") || src.startsWith("/shop")) {
+							el.setAttribute("src", BASE_URL + src.replace(/^\//, ""));
+						}
+					}
+
+					if (el.hasAttribute("href")) {
+						const href = el.getAttribute("href");
+
+						if (href.startsWith("/web") || href.startsWith("/shop")) {
+							el.setAttribute("href", BASE_URL + href.replace(/^\//, ""));
+						}
+					}
+				});
+
+			});
+		</script>
 	</body>
 </html>
-
-<style lang="scss"></style>

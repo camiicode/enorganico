@@ -2,13 +2,13 @@
 import linkOutline from '../../assets/link-out.svg';
 ---
 
-<section id="post" class="enorganico enorganico-post w-full h-screen py-10">
+<section id="post" class="enorganico enorganico-post w-full md:h-screen py-10">
   <div class="container-fluid px-0">
     <div class="row">
-      <div class="offset-md-1 col-10">
-        <h2 class="text-5xl! enorganico-text-secondary enorganico-font-weight-blacked w-250! m-auto pt-25! text-center uppercase">Ultimos Posts</h2>
+      <div class="offset-md-1 col-12 col-md-10 offset-md-1">
+        <h2 class="text-base! md:text-2xl! block max-w-[100%] enorganico-text-secondary enorganico-font-weight-blacked m-auto pt-25! text-center uppercase">Ultimos Posts</h2>
 
-        <ul class="enorganico-post__list d-flex flex-column mt-6 pt-25! ">
+        <ul class="enorganico-post__list d-flex flex-column mt-6 pt-25! px-3 px-md-0">
           
           <li class="enorganico-post__list--item list-none">
             <a href="#" class="enorganico-post__list--item-link text-">
@@ -75,7 +75,7 @@ import linkOutline from '../../assets/link-out.svg';
             text-transform: uppercase;
 
             &::before {
-              content: url(../../assets/link-out.svg);
+              content: url('/web/image/26993-c6080e7c/link-out.svg');
               position: absolute;
               top: 50%;
               right: 0;
@@ -84,18 +84,24 @@ import linkOutline from '../../assets/link-out.svg';
               height: auto;
               opacity: 1;
               fill: var(--enorganico-secondary-color);
+
+              @media screen and (max-width: 768px) {
+                display: none;
+              }
             }
 
             &:hover {
-              img {
-                position: absolute;
-                left: 85%;
-                height: 50%;
-                transform: translate(-75%, -50%);
-                opacity: 1;
-                height: auto;
-                min-height: 350px;
-              }
+              @media screen and (min-width: 768px) {
+                img {
+                  position: absolute;
+                  left: 85%;
+                  height: 50%;
+                  transform: translate(-75%, -50%);
+                  opacity: 1;
+                  height: auto;
+                  min-height: 350px;
+                } 
+              }              
             }
 
             img {
@@ -108,7 +114,15 @@ import linkOutline from '../../assets/link-out.svg';
               object-fit: cover;
               object-position: center;
               z-index: 999;
-
+              
+              @media screen and (max-width:768px) {
+                width: calc(100% - 10px);
+                height: 100px;
+                border-radius: 1rem;
+                overflow: hidden;
+                opacity: 1;
+                margin-top: 1rem;
+              }
             }
           }
         }
